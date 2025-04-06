@@ -1,1 +1,1 @@
-from models.data_ingetion import fetch_all_data
+from .data_ingestion import fetch_all_data
