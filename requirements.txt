@@ -9,3 +9,10 @@ Werkzeug>=2.2,<3.0
 praw
 instaloader
 sentence-transformers
+transformers
+torch
+vaderSentiment
+selenium
+plotly
+umap-learn
+scikit-learn
