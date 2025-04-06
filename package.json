@@ -1,0 +1,13 @@
+{
+  "name": "datahacks",
+  "version": "1.0.0",
+  "description": "Project for DataHacks",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Build step goes here'",
+    "test": "echo 'Running tests...'"
+  },
+  "author": "Vaibhav Maloo",
+  "license": "MIT",
+  "dependencies": {}
+}
