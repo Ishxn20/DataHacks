@@ -152,6 +152,12 @@
       <button type="submit">Search</button>
     </form>
 
+    {% if graph_html %}
+      <div style="margin-top: 2rem;">
+        {{ graph_html|safe }}
+      </div>
+    {% endif %}
+
     <!-- Flash messages -->
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}

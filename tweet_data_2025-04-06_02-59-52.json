@@ -1,0 +1,72 @@
+[
+  {
+    "Original_Tweet": "Someday.\n\nhttps://t.co/ZKQO5uM7Gi\n\n#Edmonton #TaylorSwift #HipHop #LosAngeles #Miami #Canada #US #Trump #Music #Artists #Russia #Kyiv",
+    "Summary": "Someday. https://t.co/ZKQO5uM7Gi #Edmonton #TaylorSwift #HipHop #LosAngeles #Miami #Canada #US #Trump...",
+    "Sentiment": 0.0,
+    "Cluster": 1,
+    "Theme": "breathe, beginning, seems"
+  },
+  {
+    "Original_Tweet": "Hey @MostRequestLive and @OnAirRomeo, We would love if you could play Fresh Out the Slammer by Taylor Swift tonight on #MostRequestedLive! \ud83d\ude09 Thanks! #StreamFreshOutTheSlammer #TaylorSwift",
+    "Summary": "Hey @MostRequestLive and @OnAirRomeo, We would love if you could...",
+    "Sentiment": 0.9214,
+    "Cluster": 2,
+    "Theme": "would, saturday, listen"
+  },
+  {
+    "Original_Tweet": "@MostRequestLive @lizzo Hey @MostRequestLive and @OnAirRomeo, We would love if you could play Fresh Out the Slammer by Taylor Swift tonight on #MostRequestedLive! \ud83d\ude09 Thanks! #StreamFreshOutTheSlammer #TaylorSwift",
+    "Summary": "@MostRequestLive @lizzo Hey @MostRequestLive and @OnAirRomeo, We would love if...",
+    "Sentiment": 0.9214,
+    "Cluster": 2,
+    "Theme": "would, saturday, listen"
+  },
+  {
+    "Original_Tweet": "RT @danreyner: https://t.co/PTNvHO3oAp\n\n10% off everything!\n\n#etsy #Croccharms #jibbitz \n#Disney #Toystory #Minions #Pokemon #Starwars #yod\u2026",
+    "Summary": "RT @danreyner: https://t.co/PTNvHO3oAp 10% off everything! #etsy #Croccharms #jibbitz #Disney...",
+    "Sentiment": 0.0,
+    "Cluster": 0,
+    "Theme": "swifties\u306b\u4f1a\u3044\u305f\u3044, tour\u304c\u604b\u3057\u3044, night"
+  },
+  {
+    "Original_Tweet": "@sun_TaylorSwift @antondewor Do you work on Saturday nights? I was watching the Mets lol",
+    "Summary": "@sun_TaylorSwift @antondewor Do you work on Saturday nights? I was...",
+    "Sentiment": 0.4215,
+    "Cluster": 2,
+    "Theme": "would, saturday, listen"
+  },
+  {
+    "Original_Tweet": "@MostRequestLive Hey @MostRequestLive and @OnAirRomeo, I\u2019d love to listen to an amazing song called Fresh Out the Slammer by #TaylorSwift! I would really appreciate if you could play it on #MostRequestedLive, thank you! \u2764\ufe0f",
+    "Summary": "@MostRequestLive Hey @MostRequestLive and @OnAirRomeo, I\u2019d love to listen to...",
+    "Sentiment": 0.957,
+    "Cluster": 2,
+    "Theme": "would, saturday, listen"
+  },
+  {
+    "Original_Tweet": "RT @TSwiftIsMyIdo1: The deep breathe at the beginning of the smallest man who ever lived \ud83d\ude2d #TTPD #TaylorSwift",
+    "Summary": "RT @TSwiftIsMyIdo1: The deep breathe at the beginning of the...",
+    "Sentiment": -0.4767,
+    "Cluster": 1,
+    "Theme": "breathe, beginning, seems"
+  },
+  {
+    "Original_Tweet": "RT @SybilPentsil: It seems the biggest news today is not #ERAS or #Match2024 it\u2019s the dating life of #TaylorSwift BUT applicants please tig\u2026",
+    "Summary": "RT @SybilPentsil: It seems the biggest news today is not...",
+    "Sentiment": 0.4497,
+    "Cluster": 1,
+    "Theme": "breathe, beginning, seems"
+  },
+  {
+    "Original_Tweet": "RT @a_cadaver_respl: &amp; Erin will return to us a John Birch Society person; laying waste to the libtard machine, like #TaylorSwift did w/ #B\u2026",
+    "Summary": "RT @a_cadaver_respl: &amp; Erin will return to us a John...",
+    "Sentiment": -0.0772,
+    "Cluster": 3,
+    "Theme": "return"
+  },
+  {
+    "Original_Tweet": "RT @justayswift13: Swifties\u306b\u4f1a\u3044\u305f\u3044\nEras Tour\u304c\u604b\u3057\u3044\n\u3068\u308a\u3042\u3048\u305aTaylor\u306e\u66f2\u3067\u66b4\u308c\u305f\u3044!!!\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d\n\nThe Eras Night Tokyo Vol. 3\u958b\u50ac\u3059\u308b\u3053\u3068\u306b\u306a\u308a\u307e\u3057\u305f\uff01\ud83e\udd79\ud83e\udd73\n\u3081\u3063\u3061\u3083\u697d\u3057\u307f\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d\n\n\u307f\u3093\u306a\u305c\u3072\u6765\u3066\u304f\u3060\u3055\u2026",
+    "Summary": "RT @justayswift13: Swifties\u306b\u4f1a\u3044\u305f\u3044 Eras Tour\u304c\u604b\u3057\u3044 \u3068\u308a\u3042\u3048\u305aTaylor\u306e\u66f2\u3067\u66b4\u308c\u305f\u3044!!!\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d\ud83d\ude2d The Eras Night Tokyo...",
+    "Sentiment": -0.9637,
+    "Cluster": 0,
+    "Theme": "swifties\u306b\u4f1a\u3044\u305f\u3044, tour\u304c\u604b\u3057\u3044, night"
+  }
+]
