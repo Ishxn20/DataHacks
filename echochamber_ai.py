@@ -217,7 +217,7 @@ def fetch_all_data(query):
     # Save output data to a JSON file (optional)
     output_data = df[["Original_Tweet", "Summary", "Sentiment", "Cluster", "Theme"]].to_dict(orient="records")
     timestamp = time.strftime("%Y-%m-%d_%H-%M-%S")
-    filename = f"tweet_data_{timestamp}.json"
+    filename = f"tweet_data.json"
     with open(filename, "w") as f:
         json.dump(output_data, f, indent=2)
     print(f"✅ Saved {len(output_data)} tweets to {filename}")
