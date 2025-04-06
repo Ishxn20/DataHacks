@@ -139,7 +139,7 @@ torch.manual_seed(42)
 # ─── Twitter API Setup ─────────────────────────────────────────────────────────
 # Replace with your actual bearer token
 
-BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAADK30QEAAAAAEBKFsn7KzkLt2%2BPdgN9RCE5pdnk%3DXh0ngds6hMw60uudwoMYp27gu3qXI1NdoVtxLUgVdEQlakywGB"
+BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAJ2t0QEAAAAAz674NB1tfFSd5%2BnSpqv8cqlcoEM%3DFusVdPAZULnHFsZSBmYFU9YoGSJh19g0jsXDEyLpgy4903TtEl"
 client = tweepy.Client(bearer_token=BEARER_TOKEN)
 
 # ─── Model & Analyzer Setup ─────────────────────────────────────────────────────

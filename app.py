@@ -1,38 +1,31 @@
-from flask import Flask, render_template, redirect, url_for, request, flash
+from flask import Flask, render_template, flash, redirect, url_for, request
 from dotenv import load_dotenv
-from echochamber_ai import fetch_all_data
 import os
+from virality import get_virality_figure_html  # import our function from virality.py
 
 load_dotenv()
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "your_secret_key")
 
-@app.route("/", methods=["GET"])
-def home():
-    # Render the homepage with no tweets or graph initially.
-    return render_template("home.html", tweets=[], query="", graph_html="")
-
 @app.route("/analyze", methods=["POST"])
 def analyze():
-    # Import fetch_all_data inside the route to avoid issues during app startup.
-    from echochamber_ai import fetch_all_data
+    # your code here
+    return render_template("home.html")
 
-    query = request.form.get("query")
-    if not query:
-        flash("No query provided", "danger")
-        return redirect(url_for("home"))
-    
+@app.route("/virality", methods=["GET"])
+def virality():
     try:
-        tweets, fig = fetch_all_data(query)
-        import plotly
-        graph_html = fig.to_html(full_html=False)
+        json_filename = "tweet_data.json"  # Ensure this file exists with the required structure
+        graph_html = get_virality_figure_html(json_filename)
     except Exception as e:
-        flash(f"Error fetching data: {e}", "danger")
-        tweets = []
+        flash(f"Error generating virality graph: {e}", "danger")
         graph_html = ""
-    
-    return render_template("home.html", tweets=tweets, query=query, graph_html=graph_html)
+    return render_template("virality.html", graph_html=graph_html)
+
+@app.route("/")
+def home():
+    return render_template("home.html", tweets=[], query="", graph_html="")
 
 @app.route("/about")
 def about():
