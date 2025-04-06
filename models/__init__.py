@@ -1,0 +1,1 @@
+from models.data_ingetion import fetch_all_data

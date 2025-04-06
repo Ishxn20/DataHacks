@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pulse Dashboard</title>
+  <!-- If you have an external styles.css, link it here instead of inline styles -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ccc;
+    }
+
+    /* Shared Hero Section Styles */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    .search-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .search-form input[type="text"] {
+      padding: 0.8rem 1rem;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 1rem;
+      width: 300px;
+      outline: none;
+    }
+
+    .search-form button[type="submit"] {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      background-color: #fff;
+      color: #000;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-form button[type="submit"]:hover {
+      background-color: #ccc;
+    }
+
+    /* Flash messages */
+    .flash-messages {
+      margin-top: 1rem;
+    }
+    .alert {
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 4px;
+    }
+    .alert-danger {
+      background-color: #a33;
+      color: #fff;
+    }
+
+    /* Results section */
+    .results {
+      margin-top: 2rem;
+    }
+    .results ul {
+      list-style: none;
+      padding: 0;
+    }
+    .results li {
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .logo a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="{{ url_for('home') }}">Pulse</a>
+    </div>
+    <nav class="nav-links">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Discover the Pulse of Social Media</h1>
+    <p>Dive into the hottest viral moments, see how the internet is reacting, and let us predict which trends will rise next.</p>
+
+    <!-- Search form -->
+    <form action="{{ url_for('analyze') }}" method="POST" class="search-form">
+      <input type="text" name="query" placeholder="Search trending topics" value="{{ query }}" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Results -->
+    <div class="results">
+      {% if tweets %}
+        <ul>
+          {% for tweet in tweets %}
+            <li>{{ tweet.text }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No results yet.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pulse. All rights reserved.</p>
+  </footer>
+</body>
+</html>

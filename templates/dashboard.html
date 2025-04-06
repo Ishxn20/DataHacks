@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Pulse - Dashboard{% endblock %}
+{% block content %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
+  <!-- Header -->
+  <header class="mb-auto">
+    <div>
+      <!-- Brand/Title on the left -->
+      <h3 class="float-md-start mb-0 text-white">Pulse</h3>
+      <!-- Minimal nav on the right -->
+      <nav class="nav nav-masthead justify-content-center float-md-end">
+        <a href="{{ url_for('logout') }}" class="nav-link fw-bold py-1 px-2 text-white">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="px-3 my-auto text-white">
+    <h4 class="mb-4">Welcome, {{ current_user.username }}!</h4>
+    <p class="text-light mb-3">
+      Enter a trending topic or viral moment
+    </p>
+    <form id="analyze-form" method="POST" action="{{ url_for('analyze') }}" class="d-flex justify-content-center mb-4" style="max-width: 600px; margin: 0 auto;">
+      <input 
+        type="text" 
+        name="query" 
+        class="form-control bg-dark text-white me-2" 
+        placeholder="e.g., Taylor Swift" 
+        required
+      >
+      <button class="btn btn-light fw-bold border-white" type="submit">Analyze</button>
+    </form>
+    <!-- Example: Display Clusters or Predictions -->
+    <div id="analysis-result" class="mt-4 text-light">
+      <p>Please enter a topic above</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto text-white-50">
+    <p class="mb-0">© 2025 Pulse</p>
+  </footer>
+</div>
+{% endblock %}
