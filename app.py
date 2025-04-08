@@ -8,10 +8,28 @@ load_dotenv()
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "your_secret_key")
 
+@app.route("/", methods=["GET"])
+def home():
+    return render_template("home.html", tweets=[], query="", graph_html="")
+
 @app.route("/analyze", methods=["POST"])
 def analyze():
-    # your code here
-    return render_template("home.html")
+    query = request.form.get("query")
+    if not query:
+        flash("No query provided", "danger")
+        return redirect(url_for("home"))
+
+    try:
+        tweets, fig = fetch_all_data(query)
+        graph_html = fig.to_html(full_html=False)
+    except Exception as e:
+        flash(f"Error fetching data: {e}", "danger")
+        tweets = []
+        graph_html = ""
+
+    return render_template("home.html", tweets=tweets, query=query, graph_html=graph_html)
+
+
 
 @app.route("/virality", methods=["GET"])
 def virality():
@@ -22,10 +40,6 @@ def virality():
         flash(f"Error generating virality graph: {e}", "danger")
         graph_html = ""
     return render_template("virality.html", graph_html=graph_html)
-
-@app.route("/")
-def home():
-    return render_template("home.html", tweets=[], query="", graph_html="")
 
 @app.route("/about")
 def about():
